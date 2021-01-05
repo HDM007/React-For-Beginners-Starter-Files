@@ -20,6 +20,7 @@ class Inventory extends React.Component{
         owner: null
     }
 
+    /*
     componentDidMount(){
         firebase.auth().onAuthStateChanged(user =>{
             if(user){
@@ -27,6 +28,9 @@ class Inventory extends React.Component{
             }
         })
     }
+    */
+
+    /*
 
     authHandler = async (authData) => {
         //look up current store in firebase, and claim if no owner.
@@ -56,10 +60,12 @@ class Inventory extends React.Component{
         this.setState({uid: null});
 
     }
+    */
 
     render() {
-        const logout = <button onClick={this.logout}>Log Out!</button>;
+        //const logout = <button onClick={this.logout}>Log Out!</button>;
         // Check if logged in
+        /*
         if(!this.state.uid){
             return <Login authenticate={this.authenticate}/>
         }
@@ -71,6 +77,7 @@ class Inventory extends React.Component{
                 {logout}
             </div>
         }
+        */
         //Finally, they must be owner, so just render the below inventory.
         return (
             <div className="inventory">
