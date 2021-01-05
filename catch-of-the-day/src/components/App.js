@@ -5,7 +5,7 @@ import Order from "./Order"
 import Inventory from "./Inventory"
 import sampleFishes from "../sample-fishes"
 import Fish from "./Fish"
-import base from '../base'
+//import base from '../base'
 
 class App extends React.Component{
     state = {
@@ -24,21 +24,23 @@ class App extends React.Component{
         if(localStorageRef){
             this.setState({ order: JSON.parse(localStorageRef)})
         }
-
+/*
         this.ref = base.syncState(`${params.storeID}/fishes`, {
             context: this,
             state: "fishes"
         });
+        */
     }
+
 
     componentDidUpdate() {
         localStorage.setItem(this.props.match.params.storeID, JSON.stringify(this.state.order));
     }
-
+/*
     componentWillUnmount(){
         base.removeBinding(this.ref)
     }
-    
+*/
     addFish = fish => {
         //take a copy of state, don't mutate it.
         const fishes = { ...this.state.fishes };

@@ -27,7 +27,7 @@ class EditFishForm extends React.Component {
 
     render() {
         return <div className="fish-edit">
-            <input type="text" name="name" onChange={this.handleChange} value={this.props.fish.name}/>
+            <input type="text" name="name" onChange={this.handleChange} value={this.props.fish.name} />
             <input type="text" name="price" onChange={this.handleChange} value={this.props.fish.price}/>
             <select type="text" name="status" onChange={this.handleChange} value={this.props.fish.status}>
                 <option value="available">Fresh!</option>
